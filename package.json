@@ -1,0 +1,24 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "RSS Virtual Keyboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rklepov/virtual-keyboard.git"
+  },
+  "keywords": [
+    "RSS",
+    "RSSchool",
+    "JSFE-2022Q1"
+  ],
+  "author": "Roman Klepov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rklepov/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/rklepov/virtual-keyboard#readme"
+}
