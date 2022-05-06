@@ -2,6 +2,7 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
@@ -19,9 +20,12 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
-      title: 'Webpack App',
+      alwaysWriteToDisk: true,
+      template: './src/index.html',
+      title: 'RSS Virtual Keyboard',
     }),
+
+    new HtmlWebpackHarddiskPlugin(),
 
     new MiniCssExtractPlugin(),
 
@@ -30,6 +34,10 @@ const config = {
   ],
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
       {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
