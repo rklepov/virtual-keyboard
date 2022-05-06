@@ -23,6 +23,7 @@ const config = {
       alwaysWriteToDisk: true,
       template: './src/index.html',
       title: 'RSS Virtual Keyboard',
+      favicon: './src/assets/img/keyboard.ico',
     }),
 
     new HtmlWebpackHarddiskPlugin(),
